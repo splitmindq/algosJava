@@ -1,17 +1,23 @@
 package org.example;
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Parentheses {
+    private static final Logger logger = Logger.getLogger(Parentheses.class.getName());
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter string: ");
+
+        logger.info("Enter string: ");
         String input = scanner.nextLine();
 
         boolean isBalanced = checkBalancedBrackets(input);
         if (isBalanced) {
-            System.out.println("True");
+            logger.info("True");
         } else {
-            System.out.println("False");
+            logger.info("False");
         }
 
         scanner.close();
