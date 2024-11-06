@@ -3,18 +3,18 @@ package task;
 import java.util.*;
 import java.util.logging.Logger;
 
-public class queueClient {
-    private static final Logger logger = Logger.getLogger(queueClient.class.getName());
+public class QueueClient {
+    private static final Logger logger = Logger.getLogger(QueueClient.class.getName());
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Queue<String> queue = new LinkedList<>();
 
 
-        System.out.println("Enter k: ");
-        int k = scanner.nextInt();
+        logger.info("Enter k: ");
+        long k = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Enter lines of text(ENTER EMPTY LINE TO STOP): ");
+       logger.info("Enter lines of text(ENTER EMPTY LINE TO STOP): ");
 
         while (true) {
             String input = scanner.nextLine();
@@ -29,7 +29,7 @@ public class queueClient {
 
     }
 
-    private static void processQueue(Queue<String> queue, int k) {
+    private static void processQueue(Queue<String> queue, long k) {
        String result = queue.stream()
                 .skip(queue.size()-k)
                 .findFirst()
