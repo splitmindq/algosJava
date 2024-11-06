@@ -1,7 +1,6 @@
 package org.example;
 import java.util.Scanner;
 import java.util.Stack;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Parentheses {
