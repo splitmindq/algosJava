@@ -18,14 +18,20 @@ containers :
 
 
 условие и номер secondTask :
+![img.png](img.png)
+
+План 20 минут, Факт - 20 минут.
 
 
 
-условие и номер thirdTask :
+условие и номер thirdTask :![img_1.png](img_1.png)
+
+План 40 минут, Факт - 40 минут.
 
 
+условие и номер fourthTask :![img_2.png](img_2.png)
 
-условие и номер fourthTask :
+План 10 минут, Факт - 10 минут.
 
 
 
