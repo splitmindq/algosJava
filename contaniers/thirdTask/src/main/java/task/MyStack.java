@@ -44,7 +44,7 @@
         }
 
         public Iterator<T> iterator() {
-            return new stackIterator<>(this);
+            return new StackIterator<>(this);
         }
 
     }
