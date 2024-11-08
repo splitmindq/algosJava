@@ -1,10 +1,12 @@
 package task;
 
 import java.util.Iterator;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class StackIter {
-    private static final Logger log = Logger.getLogger(StackIter.class.getName());
+    private static final Logger log = LoggerFactory.getLogger(StackIter.class.getName());
+
     public static void main(String[] args) {
         MyStack<Integer> myStack = new MyStack<>();
 
@@ -15,13 +17,13 @@ public class StackIter {
         Iterator<Integer> iterator = myStack.iterator();
 
         while (iterator.hasNext()) {
-            log.info(String.valueOf(iterator.next()));
+            log.info("Стек элемент: {}", iterator.next());
         }
 
         myStack.myPush(4);
 
         while (iterator.hasNext()) {
-            log.info(String.valueOf(iterator.next())); //throw exception cause user didn't create new iterator for changed stack
+            log.info("Стек элемент: {}", iterator.next()); //throw exception cause user didn't create new iterator for changed stack
         }
 
 
