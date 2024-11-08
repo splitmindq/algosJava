@@ -2,37 +2,31 @@ package task;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
+import java.util.Stack;
 
-class StackIterator<T> implements Iterator<T> {
+class stackIterator<T> implements Iterator<T> {
     private final MyStack<T> stack;
-    private final int count;
-
-    public StackIterator(MyStack<T> stack) {
+    private final int expectedModCount;
+    private int currentIndex;
+    public stackIterator(MyStack<T> stack) {
         this.stack = stack;
-        this.count = stack.popCount + stack.pushCount;
+        expectedModCount = stack.getModCount();
+        this.currentIndex = stack.elements.size()-1;
+
     }
 
     @Override
     public boolean hasNext() {
-        if (count != stack.popCount + stack.pushCount) {
-            throw new ConcurrentModificationException();
-        }
-        return !stack.isEmpty();
+        if(expectedModCount != stack.getModCount()) throw new ConcurrentModificationException();
+        return currentIndex >= 0;
     }
 
     @Override
+
     public T next() {
-        if(count != stack.popCount + stack.pushCount) {
-            throw new ConcurrentModificationException();
-        }
-        stack.popCount--;
-
-        /*
-         stack.popCount-- так как мы не сможем итерироваться после 1 элемента
-          в связи с увеличением счётчика popCount при вызове myPop()
-         */
-
-        return stack.myPop();
+        if(!hasNext()) throw new NoSuchElementException();
+        return stack.elements.get(currentIndex--);
 
     }
 

@@ -1,36 +1,50 @@
-package task;
+    package task;
 
-import java.util.ConcurrentModificationException;
-import java.util.Iterator;
-import java.util.ArrayList;
-import java.util.List;
+    import java.util.ArrayList;
+    import java.util.EmptyStackException;
+    import java.util.Iterator;
+    import java.util.List;
 
-public class MyStack<T> {
-    private final List<T> elements;
-    public int popCount;
-    public int pushCount;
+    public class MyStack<T>{
 
-    public MyStack() {
-        this.elements = new ArrayList<>();
-        this.popCount = 0;
-        this.pushCount = 0;
-    }
 
-    public void myPush(T element) {
-        this.elements.add(element);
-        this.pushCount++;
-    }
+        final List<T> elements;
+        private int modCount;
 
-    public T myPop() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Stack is empty");
+        public MyStack() {
+
+           this.elements = new ArrayList<T>();
+           this.modCount = 0;
+
         }
-        T element = elements.removeLast();
-        popCount++;
-        return element;
-    }
 
-    public boolean isEmpty() {
-        return elements.isEmpty();
+
+        public void myPush(T element) {
+
+            elements.add(element);
+            modCount++;
+
+        }
+        public T myPop() {
+            if(isEmpty()){
+                throw new EmptyStackException();
+            }
+            T element = elements.removeLast();
+            elements.removeLast();
+            modCount++;
+            return element;
+        }
+
+        public boolean isEmpty() {
+            return elements.isEmpty();
+        }
+
+        public int getModCount() {
+            return modCount;
+        }
+
+        public Iterator<T> iterator() {
+            return new stackIterator<>(this);
+        }
+
     }
-}

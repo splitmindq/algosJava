@@ -1,20 +1,27 @@
 package task;
 
+import java.util.Iterator;
+
 public class StackIter {
     public static void main(String[] args) {
-        MyStack<Integer> stack = new MyStack<>();
+        MyStack<Integer> myStack = new MyStack<>();
 
-        stack.myPush(1);
-        stack.myPush(2);
+        myStack.myPush(1);
+        myStack.myPush(2);
+        myStack.myPush(3);
 
-
-        StackIterator<Integer> iterator = new StackIterator<>(stack);
+        Iterator<Integer> iterator = myStack.iterator();
 
         while (iterator.hasNext()) {
-            Integer value = iterator.next();
-            System.out.println(value);
-
+            System.out.println(iterator.next());
         }
+
+        myStack.myPush(4);
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next()); //throw exception cause user didn't create new iterator for changed stack
+        }
+
 
     }
 }
