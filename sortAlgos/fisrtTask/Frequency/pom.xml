@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>task</groupId>
-    <artifactId>thirdTask</artifactId>
+    <artifactId>Frequency</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -15,18 +15,17 @@
     </properties>
 
     <dependencies>
-        <!-- Зависимость для SLF4J -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.30</version>
-        </dependency>
-        <!-- Зависимость для Logback -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-        </dependency>
+    <!-- Зависимость для SLF4J -->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.30</version>
+    </dependency>
+    <!-- Зависимость для Logback -->
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.2.3</version>
+    </dependency>
     </dependencies>
-
 </project>
