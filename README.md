@@ -2,6 +2,8 @@
 Папки будут именованы в соответствии с темой .
 Каждая папка будет хранить в себе 4 задания.
 
+SONAR - https://sonarcloud.io/project/overview?id=splitmindq_algosJava
+
 #----------------------------------------
 
 containers :
@@ -18,24 +20,23 @@ containers :
 
 
 условие и номер secondTask :
-![img_3.png](img_3.png)
+![image](https://github.com/user-attachments/assets/7f373c7a-f385-4aab-8bd0-2dd4c3d1e78a)
+
 
 План 20 минут, Факт - 20 минут.
 
 
 
-условие и номер thirdTask :
-![img_5.png](img_5.png)
+условие и номер thirdTask :![image](https://github.com/user-attachments/assets/e4f27bed-ad44-465e-8cb1-283f49482272)
+
 
 План 40 минут, Факт - 40 минут.
 
 
-условие и номер fourthTask :![img_7.png](img_7.png)
+условие и номер fourthTask :![image](https://github.com/user-attachments/assets/4771b19c-455d-4a54-8d15-b644e233babb)
 
 
 План 10 минут, Факт - 10 минут.
-
-
 
 
 #----------------------------------------
