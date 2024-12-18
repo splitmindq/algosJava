@@ -41,6 +41,8 @@ containers :
 
 #----------------------------------------
 
+![image](https://github.com/user-attachments/assets/44ad4a4f-7f2a-455c-b3b8-b528fd9fa41f)
 
+план - 30 минут, факт - 30 минут
 
 
